@@ -32,39 +32,27 @@ class _MyHomePageState extends State<MyHomePage> {
     log('build()');
 
     return Scaffold(
-      body: SafeArea(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            
-            Expanded(
-
-              child: Column(
-
-                mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Icon(Icons.alarm),
-                  Icon(Icons.block),
-                  Icon(Icons.access_alarm),
-                ],
-              ),
+      body: Column(
+        children: [
+          Flexible(
+            flex: 1,
+            child: Container(
+              color: Colors.red,
             ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Icon(Icons.alarm),
-                  Icon(Icons.block),
-                  Icon(Icons.access_alarm),
-                ],
-              ),
-            )
-          ],
-        ),
+          ),
+          Flexible(
+            flex: 2,
+            child: Container(
+              color: Colors.blue,
+            ),
+          ),
+          // Flexible(
+          //   flex: 2,
+          //   child: Container(
+          //     color: Colors.green,
+          //   ),
+          // ),
+        ],
       )
     );
   }
