@@ -12,48 +12,23 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    log('initState()');
-  }
+  
 
   @override
   Widget build(BuildContext context) {
-    log('build()');
-
     return Scaffold(
-      body: Column(
-        children: [
-          Flexible(
-            flex: 1,
-            child: Container(
-              color: Colors.red,
-            ),
-          ),
-          Flexible(
-            flex: 2,
-            child: Container(
-              color: Colors.blue,
-            ),
-          ),
-          // Flexible(
-          //   flex: 2,
-          //   child: Container(
-          //     color: Colors.green,
-          //   ),
-          // ),
-        ],
-      )
+      appBar: AppBar(
+        title: Text('Containers'),
+      ),
+      body: Container(
+        margin: EdgeInsets.only(top: 24),
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          shape: BoxShape.circle
+        ),
+        padding: EdgeInsets.all(20),
+        child: Icon(Icons.accessibility_sharp, color: Colors.white,),
+      ),
     );
   }
 }
